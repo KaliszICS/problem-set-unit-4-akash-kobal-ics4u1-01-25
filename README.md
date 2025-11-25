@@ -34,12 +34,12 @@ A size() method which returns the amount of cards in the deck.</br>
 A draw() method that removes the top card from the deck and returns it. (The top of the deck is up to you. It should be consistent). If there are no cards left in the deck, return null.</br>
 A shuffle() method that rearranges the order of the cards in the deck, use Google if you get stuck here to help you with this if needed (DO NOT COPY CODE).</br>
 
-Here are some helpful hints to help you along the way:</br>
 
 
 An addCard(Card card) method that adds the provided card into the deck. Should not add the card if it is null.</br>
 A reshuffle(Card[] cards) method that adds all of the cards in the provided card array into the deck. Shuffle the deck after adding them.</br>
 
+Here are some helpful hints to help you along the way:</br>
 Remember to be consistent with which end of the deck is the "top".</br>
 Make sure your shuffle method provides good randomization.</br>
 
@@ -61,8 +61,6 @@ A removeAll() method that returns an array of cards and removes them all from yo
 A toString() method that returns all of the cards in the format "Ace of hearts, King of Hearts, Queen of Hearts, Jack of Hearts, 9 of Spades."</br>
 
 
-Create the same classes as above, plus the Player class.</br>
-
 ### The Player class
 
 Should have two constructors:</br>
@@ -76,7 +74,6 @@ The following methods are required:</br>
 A size() method which returns the size of the hand.</br>
 A draw(Deck deck) method that adds a card from the deck to the hand of the player.</br>
 A discardCard(Card card, DiscardPile discardPile) method that discards a card from the hand to the given deck's discard pile.</br>
-Return true if the card exists in the hand. False otherwise.</br>
 A returnCard(Card card, Deck deck) method that returns the specified card to the deck. Return true if the card exists in the hand. False otherwise.</br>
 A toString() method that will print out their name, age, and hand of cards (e.g. "Mr. Kalisz, 99, Ace of hearts, King of Hearts, Queen of Hearts, Jack of Hearts, 9 of Spades.")</br>
 
