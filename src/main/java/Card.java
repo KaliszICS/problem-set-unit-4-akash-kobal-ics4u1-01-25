@@ -17,15 +17,16 @@ public class Card {
      * @param suit - the card's suit
      * @param value - the card's value
      * 
+     * @exception NullPointerException - if name, or suit is null
      * @exception IllegalArgumentException - if card, suit, is empty, or if value is negative 
      */
     public Card(String name, String suit, int value) {
         if (name == null)
-            throw new IllegalArgumentException("Card name cannot be null");
+            throw new NullPointerException("Card name cannot be null");
         if (name.trim().isEmpty())
             throw new IllegalArgumentException("Card name cannot be empty");
         if (suit == null)
-            throw new IllegalArgumentException("Card suit cannot be null");
+            throw new NullPointerException("Card suit cannot be null");
         if (suit.trim().isEmpty())
             throw new IllegalArgumentException("Card suit cannot be empty");
         if (value < 0)
@@ -74,7 +75,8 @@ public class Card {
      * Also checks if this card is equal to the obj input.
      * If they are not the same, returns false.
      * 
-     * @return other = returns true if first and second card is equal, false otherwise.
+     * @param obj the object to compare
+     * @return true if first and second card is equal, false otherwise.
      */
     @Override
     public boolean equals(Object obj) {

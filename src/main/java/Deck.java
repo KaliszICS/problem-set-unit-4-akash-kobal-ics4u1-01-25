@@ -20,6 +20,7 @@ public class Deck {
      * Any null entries inside the array are skipped.
      *
      * @param cardArray - the array of Card objects used to form the deck
+     * 
      * @throws IllegalArgumentException - if cardArray is null
      */
     public Deck(Card[] cardArray) {
@@ -93,11 +94,11 @@ public class Deck {
      * If the provided card is null, nothing is added.
      *
      * @param card - the card to add
-     * @throws IllegalArgumentException if card is null
+     * @throws NullPointerException if card is null
      */
     public void addCard(Card card) {
         if (card == null) {
-            throw new IllegalArgumentException("Cannot add null card to deck");
+            throw new NullPointerException("Cannot add null card to deck");
         }
         cards.add(card);
     }
@@ -107,11 +108,11 @@ public class Deck {
      * Once all cards are added, the deck is shuffled.
      *
      * @param cardArray - the array of cards to place back into the deck
-     * @throws IllegalArgumentException if cardArray is null
+     * @throws NullPointerException if cardArray is null
      */
     public void reshuffle(Card[] cardArray) {
         if (cardArray == null)
-            throw new IllegalArgumentException("Card array cannot be null");
+            throw new NullPointerException("Card array cannot be null");
         for (Card c : cardArray) {
             if (c != null) {
                 addCard(c);
